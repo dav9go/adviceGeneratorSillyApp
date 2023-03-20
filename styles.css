@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+:root {
+  /*Colors*/
+
+  --col-light-cyan: hsl(193, 38%, 86%);
+  --col-neon-green: hsl(150, 100%, 66%);
+
+  /*Neutral colors*/
+  --col-grayis-blue: hsl(217, 19%, 38%);
+  --col-dark-grayis-blue: hsl(217, 19%, 24%);
+  --col-dark: hsl(218, 23%, 16%);
+
+  /*Font*/
+  font-size: 28px;
+  font-family: "Manrope", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: var(--col-dark);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.box {
+  margin-top: 4.5rem;
+  width: 90%;
+  max-width: 500px;
+  background-color: var(--col-dark-grayis-blue);
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 11rem;
+  cursor: pointer;
+  border-radius: 0.35rem;
+}
+
+.title {
+  color: var(--col-neon-green);
+  font-size: 0.4rem;
+  letter-spacing: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+.advice {
+  color: var(--col-light-cyan);
+  font-size: 0.8rem;
+  flex: 1;
+  margin: 0rem 0 2.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separator-phone {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.separator-desktop {
+  display: none;
+}
+
+.dice {
+  background-color: var(--col-neon-green);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(50%) translateX(-50%);
+}
+
+.dice:hover {
+  box-shadow: 0 0 10px 2px var(--col-neon-green);
+}
+
+@media only screen and (min-width: 900px) {
+  body,
+  html {
+    background-color: var(--col-dark);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .box {
+    margin-top: 0rem;
+    height: 11rem;
+  }
+
+  .separator-phone {
+    display: none;
+  }
+
+  .separator-desktop {
+    display: inline;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
